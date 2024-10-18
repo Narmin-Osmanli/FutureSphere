@@ -1,0 +1,765 @@
+@import 'colors';
+@import 'reset';
+@import 'mixin';
+@import 'tags';
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    .header {
+        background-color: $primaryColor;
+        height: 60px;
+        border-radius: 47px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        @include sm{
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 30px;
+            height: 54px;
+        }
+        .header-wrap{
+            height: 35px;
+            width: 1250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include sm{
+                width: 95%;
+                display: flex;
+                align-items: center;
+            }
+            .header-logo{
+                @include sm{
+                    width: 152px;
+                    height: 23px;
+                    display: flex;
+                    align-items: flex-start;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            ul{
+                display: flex;
+                width: 245px;
+                height: 22px;
+                gap: 16px;
+
+                @include sm{
+                    display: none;
+                }
+                
+                li{
+                    font-weight: 400;
+                    font-family: "Manrope", sans-serif;
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 21px;
+                    a{
+                        text-decoration: none;
+                        color: $liColor;
+                    }
+                }
+            }
+
+            .header-button{
+                button{
+                    width: 137px;
+                    height: 35px;
+                    border-radius: 20px;
+                    border: transparent;
+                    background-color: $secondryColor;
+                    @include sm {
+                        display: none;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $liColor;
+                        width: 77px;
+                        height: 19px;
+                        font-family: "Inter", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            .header-menu{
+                display: none;
+                @include sm{
+                    display: flex;
+                    width: 30px;
+                    height: 30px;
+                    a{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------
+
+    .hero{
+        height: 884px;
+        margin-top: 48px;
+
+        @include sm{
+            height: 710px;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .hero-heading{
+            width: 100%;
+            height: 277px;
+            gap: 15px;
+            display: grid;
+
+            @include sm{
+                width: 100%;
+                height: 147px;
+            }
+
+            .hero-h1{
+                width: 100%;
+                height: 174px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include sm{
+                    height: 87px;
+                    width: 100%;
+                }
+
+                h1{
+                    text-align: center;
+                    font-family: "Inter", serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 76px;
+                    line-height: 88px;
+                    color: $primaryColor;
+                    @include sm{
+                        font-weight: 500;
+                        font-size: 35px;
+                        line-height: 36px;
+                    }
+                }
+            }
+
+            .hero-p{
+                width: 100%;
+                display: flex;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                @include sm{
+                    width: 100%;
+                    height: 17px;
+                }
+                p{
+                    font-family: "Manrope", sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 22px;
+                    color: $textGray;
+                    @include sm{
+                        font-size: 12px;
+                        line-height: 17px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .hero-button{
+                width: 100%;   
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                @include sm {
+                    width: 100%;
+                    height: 27px;
+                }
+
+                .but-black{
+                    width: 108px;
+                    height: 35px;
+                    border-radius: 20px;
+                    background-color: $primaryColor;
+                    border-color: transparent;
+                    @include sm {
+                        width: 61px;
+                        height: 27px;
+                    }
+                    a{
+                        width: 48px;
+                        @include hero-a;
+                        @include sm{
+                            font-size: 12px;
+                            line-height: 16px; 
+
+                        }
+                    }
+                }
+                .but-purp{
+                    width: 137px;
+                    height: 35px;
+                    border-radius: 20px;
+                    border-color: transparent;
+                    background-color: $secondryColor;
+                    @include sm{
+                        width: 85px;
+                        height: 27px;
+                    }
+                    a{
+                        @include hero-a;
+                        width: 77px;
+                        @include sm{
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 388px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+
+            @include sm{
+                height: 245px;
+                width: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            img{
+                border-radius: 190px;
+                @include sm{
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .hero-main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 123px;
+            background-color: $backColor;
+            width: 95%;
+            margin: auto;
+            @include sm{
+                height: 198px;
+                border: 1px solid #EFF0F6;
+                border-radius: 16px;
+                background-color: transparent;
+                display: block;
+            }
+
+
+            .stat1{
+                @include stat;
+                width: 233px;
+                @include sm{
+                    height: 43px;
+                    margin-top: 20px;
+                }
+                
+                h3{
+                    @include stat-h3;
+                }
+                p{
+                    @include stat-p;
+                    width: 235px;
+                }
+            }
+            .stat2{
+                @include stat;
+                width: 138px;
+                @include sm{
+                    height: 45px;
+                }
+                
+                h3{
+                    @include stat-h3;
+
+                }
+                p{
+                    @include stat-p;
+                    width: 139px;
+                }
+            }
+            .stat3{
+                @include stat;
+                width: 255px;
+                @include sm{
+                    height: 45px;
+                }
+                
+                h3{
+                    @include stat-h3;
+                }
+                p{
+                    @include stat-p;
+                    width: 226px;
+                }
+            }
+
+            .line{
+                height: 84px;
+                border: 1px solid #EDF0EE;
+                @include sm{
+                    width: 208px;
+                    height: 0px;
+                    margin-top: 10px;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    text-align: center;
+                    margin-left: 110px;
+                }
+            }
+        }
+    }
+
+    // ---------------------------------------------
+
+    .discover{
+        width: 100%;
+        height: 697px;
+        margin-top: 30px;
+        padding-top: 30px;
+
+        @include sm{
+            height: 1255px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+
+        .discover-text{
+            width: 100%;
+            height: 622px;
+            .feautues{
+                width: 900px;
+                height: 150px;
+                margin: 0 auto;
+                @include sm{
+                    width: 100%;
+                    height: 145px;
+                }
+
+                .discover-section{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    
+                    button{
+                        width: 85px;
+                        height: 30px;
+                        border: 1px solid #EEE2FE;
+                        border-radius: 22px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: linear-gradient(90deg, #E9D8FF -195.88%, rgba(255, 255, 255, 0) 364.12%, #29252E 364.12%);
+                        a{
+                            text-decoration: none;
+                            width: 65px;
+                            height: 22px;
+                            font-weight: 400;
+                            font-family: "Manrope", sans-serif;
+                            font-style: normal;
+                            font-size: 16px;
+                            line-height: 21px;
+                            color: $secondryColor;
+                        }
+                    }
+                }
+
+                .discover-frame{
+                    width: 100%;
+                    height: 100px;
+                    margin-top: 18px;
+                    margin: 0 auto;
+
+                    @include sm{
+                        width: 90%;
+                        height: 112px;
+                        margin: 0 auto;
+                        margin-top: 10px;
+                    }
+                    h2{
+                        width: 100%;
+                        height: 58px;
+                        text-align: center;
+                        font-family: "Inter", serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 48px;
+                        line-height: 58px;
+                        color: $primaryColor;
+                        @include sm{
+                            width: 100%;
+                            margin: 0 auto;
+                            height: 58px;
+                            font-weight: 500;
+                            font-size: 35px;
+                            line-height: 32px;
+                        }
+                    }
+                    p{
+                        width: 100%;
+                        height: 22px;
+                        text-align: center;
+                        font-family: "Manrope", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 22px;  
+                        color: $textGray;
+                        margin-top: 15px;
+                        @include sm{
+                            width: 100%;
+                            height: 34px;
+                            font-size: 15px;
+                            line-height: 19px;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            .discover-content{
+                width: 100%;
+                height: 422px;
+                border-radius: 16px;
+                display: flex;
+                justify-content: space-around;
+                background-color: $liColor;
+                border: 1px solid $backColor;
+                margin-top: 50px;
+                @include sm{
+                    display: block;
+                    height: 1086px;
+                }
+
+                .each1{
+                    @include each;
+                    img{    
+                        @include img;
+                    }
+                    .each-text1{
+                        @include text;
+                        h5{
+                            @include each-h5;
+                        }
+                        p{
+                            @include each-p;
+                            width: 231px;
+                            height: 132px;
+                        }
+                    }
+                }
+                .discover-line{
+                    height: 201px;
+                    border: 1px solid $lineColor;
+                    width: 0;
+                    margin: auto 0;
+                    @include sm{
+                        width: 357px;
+                        height: 0;
+                        margin: 0 auto;
+                    }
+                }
+                .each2{
+                    @include each;
+                    @include sm{
+                        height: 316px;
+                    }
+                    img{
+                        @include img;
+                    }
+                    .each-text2{
+                        @include text;
+                        h5{
+                            @include each-h5;
+                        }
+                        p{
+                            @include each-p;
+                            width: 262px;
+                            height: 144px;
+                        }
+                    }
+
+                }
+                .each3{
+                    @include each;
+                    @include sm{
+                        height: 292px;
+                    }
+                    img{
+                        @include img;
+                    }
+                    .each-text3{
+                        @include text;
+                        h5{
+                            @include each-h5;
+                        }
+                        p{
+                            @include each-p;
+                            width: 262px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+        .discover-button{
+            width: 100%;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 0;
+            margin-top: 25px;
+            @include sm{
+                display: none;
+            }
+
+            .nav-button{
+                width: 138px;
+                height: 35px;
+                background-color: $secondryColor;
+                border-radius: 20px;
+                border-color: transparent;
+                a{
+                    text-decoration: none;
+                    width: 78px;
+                    height: 19px;
+                    font-weight: 500;
+                    font-family: "Inter", serif;
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: $liColor;
+                }
+            }
+            .button{
+                width: 92px;
+                // height: 24px;
+                gap: 8px;
+                font-family: "Inter", serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $primaryColor;
+                height: 24px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    // -----------------------------------------------
+
+
+    .statement{
+        height: 448px;
+        padding: 43px 20px;
+        margin-top: 30px;
+
+        @include sm{
+            width: 90%;
+            height: 822px;
+            // margin: auto;
+            margin-top: 30px;
+            // padding: 16px;
+            position: relative;
+
+        }
+        .statement-padd{
+            border: 1px solid $backColor;
+            border-radius: 16px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            @include sm{
+            border: 1px solid red;
+            padding: 17px;
+            display: block;
+            position: relative;
+            }
+
+            .left-content{
+                width: 45%;
+                height: 419px;
+                margin: auto 0;
+                position: relative;
+
+                .top-left{
+                    width: 100%;
+                    height: 346px;
+                    position: relative;
+
+                    .top-p{
+                        width: 196px;
+                        height: 30px;
+                        border-radius: 22px;
+                        border: 1px solid #EEE2FE;
+                        background: linear-gradient(90deg, #E9D8FF -195.88%, rgba(255, 255, 255, 0) 364.12%, #29252E 364.12%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p{
+                            // width: 167px;
+                            height: 22px;
+                            font-family: "Manrope", sans-serif;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 21px;
+                            color: $secondryColor;
+                        }
+                    }
+
+                    h3{
+                        width: 100%;
+                        height: 132px;
+                        font-family: "Inter", serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 40px;
+                        line-height: 45px;
+                        color: $primaryColor;
+                        margin-top: 20px;
+                        @include sm{
+                            position: absolute;
+                            bottom: -120px;
+
+                        }
+                    }
+
+                    .left-p{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 144px;
+                        font-family: "Manrope", sans-serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 19px;
+                        line-height: 24px;
+                        color: $textGray;
+                        @include sm{
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                .left-button{
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 202px;
+                    height: 35px;
+                    gap: 15px;
+                    @include sm{
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                    .button1{
+                        width: 49px;
+                        height: 19px;
+                        font-family: "Inter", serif;    
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: $secondryColor;
+                    }
+                    .button2{
+                        width: 138px;
+                        height: 35px;
+                        border-radius: 20px;
+                        background-color: $secondryColor;
+                        border-color: transparent;
+                        .button2-a{
+                            height: 19px;
+                            font-family: "Inter", serif;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            text-decoration: none;
+                            line-height: 19px;
+                            color: $liColor;
+                        }
+                    }
+                }
+
+            }
+            .right-content{
+                width: 45%;
+                height: 448px;
+                // @include sm{
+                //     position: absolute;
+                //     top: 80px;
+                //     left: 0;
+                //     width: 90%;
+                //     height: 448px;
+                //     border: 1px solid red;
+
+                // }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 32px;
+                    // @include sm{
+                    //     width: 100%;
+                    //     height: 100%;
+                    // }
+                }
+            }
+        }
+    }
+}
+  
+
+// ------------------------------------------------------
+.footer {
+    width: 100%;
+    background-color: #a182e4;
+    height: 265px;
+}
