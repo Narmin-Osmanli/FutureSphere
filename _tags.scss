@@ -130,3 +130,18 @@
         align-items: baseline;
     }
 }
+
+@mixin footer-li{
+    height: 22px;
+    font-family: "Manrope", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    
+}
+
+@mixin footer-a{
+    color: $liColor;
+
+}

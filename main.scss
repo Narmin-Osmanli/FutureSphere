@@ -598,9 +598,7 @@
         @include sm{
             width: 90%;
             height: 822px;
-            // margin: auto;
             margin-top: 30px;
-            // padding: 16px;
             position: relative;
 
         }
@@ -611,7 +609,6 @@
             display: flex;
             justify-content: space-between;
             @include sm{
-            border: 1px solid red;
             padding: 17px;
             display: block;
             position: relative;
@@ -620,13 +617,17 @@
             .left-content{
                 width: 45%;
                 height: 419px;
-                margin: auto 0;
+                margin: auto 20px;
                 position: relative;
+                @include sm{
+                    width: 100%;
+                }
 
                 .top-left{
                     width: 100%;
                     height: 346px;
                     position: relative;
+
 
                     .top-p{
                         width: 196px;
@@ -662,8 +663,10 @@
                         margin-top: 20px;
                         @include sm{
                             position: absolute;
-                            bottom: -120px;
-
+                            top: 500px;
+                            height: 72px;
+                            font-size: 28px;
+                            line-height: 24px;
                         }
                     }
 
@@ -681,7 +684,10 @@
                         color: $textGray;
                         @include sm{
                             position: absolute;
-                            bottom: 0;
+                            top: 620px;
+                            height: 146px;
+                            line-height: 20px;
+                            font-size: 17px;
                         }
                     }
                 }
@@ -697,7 +703,7 @@
                     gap: 15px;
                     @include sm{
                         position: absolute;
-                        bottom: 0;
+                        top: 830px;
                     }
 
                     .button1{
@@ -709,6 +715,12 @@
                         font-size: 16px;
                         line-height: 19px;
                         color: $secondryColor;
+                        @include sm{
+                            width: 39px;
+                            height: 17px;
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
                     }
                     .button2{
                         width: 138px;
@@ -716,6 +728,11 @@
                         border-radius: 20px;
                         background-color: $secondryColor;
                         border-color: transparent;
+                        @include sm{
+                            width: 85px;
+                            height: 27px;
+
+                        }
                         .button2-a{
                             height: 19px;
                             font-family: "Inter", serif;
@@ -725,6 +742,10 @@
                             text-decoration: none;
                             line-height: 19px;
                             color: $liColor;
+                            @include sm{
+                                font-size: 12px;
+                                line-height: 17px;
+                            }
                         }
                     }
                 }
@@ -733,25 +754,834 @@
             .right-content{
                 width: 45%;
                 height: 448px;
-                // @include sm{
-                //     position: absolute;
-                //     top: 80px;
-                //     left: 0;
-                //     width: 90%;
-                //     height: 448px;
-                //     border: 1px solid red;
+                margin: 20px;
+                @include sm{
+                    position: absolute;
+                    bottom: 380px;
+                    left: 0;
+                    width: 90%;
+                    height: 448px;
+                    position: relative;
 
-                // }
-                img{
+                }
+                .right-content-img{
                     width: 100%;
                     height: 100%;
                     border-radius: 32px;
-                    // @include sm{
-                    //     width: 100%;
-                    //     height: 100%;
-                    // }
+                    @include sm{
+                        width: 100%;
+                        // height: 100%;
+                        object-fit : cover ;
+
+                    }
                 }
             }
+        }
+    }
+
+    // ----------------------------------------------
+
+    .clients{
+        height: 270px;
+        width: 95%;
+        margin: auto;
+        margin-top: 100px;
+        position: relative;
+        @include sm{
+            width: 100%;
+            height: 348px;
+            margin-top: 130px;
+            // border: 1px solid red;   
+        }
+
+        .client-top{
+            width: 80%;
+            height: 172px;
+            margin: 0 auto;
+
+            .client-section{
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;  
+                
+                .client-section-a{
+                    width: 99px;
+                    height: 22px;
+                    border: 1px solid #EEE2FE;
+                    background: linear-gradient(90deg, #E9D8FF -195.88%, rgba(255, 255, 255, 0) 364.12%, #29252E 364.12%);
+                    border-radius: 22px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;  
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-family: "Manrope", serif;
+                    font-style: normal;
+
+                }
+            }
+            .client-heading{
+                width: 100%;
+                height: 122px;
+                position: relative;
+                @include sm{
+                    width: 100%;
+                    height: 117px;
+                    margin-top: 15px;
+                }
+
+                .client-heading-h2{
+                    height: 58px;
+                    font-family: "Inter", serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 48px;
+                    line-height: 58px;
+                    color: $primaryColor;
+                    text-align: center;
+                    @include sm{
+                        height: 58px;
+                        font-weight: 500;
+                        font-size: 32px;
+                        line-height: 29px;
+                    }
+                }
+                .client-heading-p{
+                    height: 44px;
+                    width: 85%;
+                    margin: auto;
+                    margin-top: 18px;
+                    color: $textGray;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 19px;
+                    line-height: 22px;
+                    font-family: "Manrope", serif;
+                    font-style: normal;
+                    @include sm{
+                        height: 51px;
+                        font-size: 12px;
+                        line-height: 17px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .client-bottom{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            @include sm{
+                width: 100%;
+                height: 164px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                // gap: 10px;
+            }
+            .company-logo{
+                @include sm{
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------
+
+    .services{
+        width: 95%;
+        margin-top: 35px;
+        padding: 36px 20px;
+        @include sm{
+            display: none;
+        }
+
+        .services-main{
+            display: flex;
+            justify-content: space-between;
+            height: 406px;
+
+            .left-service{
+                width: 45%;
+                height: 352px;
+                margin: auto 0;
+
+                .top-service{
+                    width: 100%;
+                    height: 272px;
+
+                    .left-top-tag{
+                        width: 94px;
+                        height: 30px;
+                        border-radius: 22px;
+                        border: 1px solid #EEE2FE;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: linear-gradient(90deg, #E9D8FF -195.88%, rgba(255, 255, 255, 0) 364.12%, #29252E 364.12%);
+
+                        .left-top-tag-p{
+                            width: 62px;
+                            height: 22px;
+                            font-style: normal;
+                            font-family: "Manrope", serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $secondryColor;
+                        }
+                    }
+
+                    h3{
+                        width: 100%;
+                        height: 88px;
+                        font-family: "Inter", serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 40px;
+                        line-height: 43px;
+                        color: $h3Color;
+                        margin-top: 10px;    
+                    }
+                    p{
+                        width: 100%;
+                        height: 114px;
+                        font-family: "Inter", serif;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 21px;
+                        margin-top: 10px;
+                        color: $textGray;
+                    }
+                }
+
+                .bottom-service{
+                    width: 100%;
+                    height: 56px;
+                    display: flex;
+                    gap: 10px;
+                    justify-content: end;
+                    margin-top: 22px;
+                }
+            }
+
+            .right-service{
+                width: 43%;
+                height: 406px;
+
+
+                .right-service-img{
+                    width: 100%;
+                    border-radius: 32px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------
+
+    .global{
+        height: 754px;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 40px;
+        @include sm{
+            width: 100%;
+            height: 925px;
+        }
+
+        .global-tag{
+
+            p{
+                background: linear-gradient(90deg, #E9D8FF -195.88%, rgba(255, 255, 255, 0) 364.12%, #29252E 364.12%);
+                border-radius: 22px;
+                text-align: center;
+                width: 113px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Manrope", serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $secondryColor;
+                margin: 0 auto;
+                height: 30px;
+
+                @include sm{
+                    height: 24px;
+                }
+            }
+        }
+        h1{
+            height: 58px;
+            font-family: "Inter", serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 58px;
+            color: $primaryColor;
+            text-align: center;
+            margin-top: 10px;
+
+            @include sm{
+                height: 29px;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
+        .global-main{
+            @include sm{
+                height: 840px;
+            }
+            .global-text{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 447px;
+                gap: 50px;
+                @include sm{
+                    display: block;
+                    height: 738px;
+                    margin-top: 10px;
+                }
+
+                img{
+                    height: 335px;
+                    border-radius: 16px;
+                    margin: auto 0;
+                    @include sm{
+                        height: 335px;
+                        width: 100%;
+                    }
+
+                }
+                .frame-text{
+                    height: 305px;
+                    margin: auto 0;
+                    @include sm{
+                        height: 371px;
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+
+                    .frame-top{
+                        height: 269px;
+                        width: 440px;
+                        position: relative;
+                        @include sm{
+                            height: 329px;
+                            margin: 0 auto;
+                        }
+
+                        p{
+                            width: 100%;
+                            height: 171px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-family: "Inter", serif;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $textGray;
+                            @include sm{
+                                height: 266px;
+                                font-size: 18px;
+                                line-height: 22px;
+                            }
+
+                        }
+
+                        .clients-info{
+                            height: 78px;
+                            text-align: left;
+                            position: absolute;
+                            bottom: -20px;
+                            @include sm{
+                                height: 43px;
+                                bottom: 10px;
+                            }
+
+                            .client-1{
+                                // width: 181px;
+                                height: 29px;
+                                font-style: normal;
+                                font-family: "Inter", serif;
+                                font-weight: 400;
+                                font-size: 24px;
+                                line-height: 29px;
+                                color: $primaryColor;
+                            }
+                            .client-2{
+                                height: 24px;
+                                font-style: normal;
+                                font-family: "Inter", serif;
+                                font-weight: 400;
+                                font-size: 20px;
+                                color: $primaryColor;
+                                line-height: 24px;
+                            }
+                        }
+
+                    }
+                    
+                    .global-logo{
+                        width: 100%;
+                        height: 56px;
+                        display: flex;
+                        justify-content: end;
+                        gap: 10px;
+                        @include sm{
+                            height: 24px;
+                            width: 98%;
+                        }
+
+                        .logo-1, .logo-2{
+                            img{
+                                width: 56px;
+                                height: 56px;
+                                @include sm{
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .other-logos{
+            width: 100%;
+            height: 139px;
+            margin: auto;
+
+            @include sm{
+                height: 86px;
+                width: 100%;
+            }
+
+            .line-logo{
+                height: 24px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                @include sm{
+                    height: 17px;
+                }
+
+                .logo-line{
+                    border: 1px solid #00000080;
+                    width: 555px;
+                    height: 0;
+                    @include sm{
+                        width: 330px;
+                    }
+                }
+                p{
+                    width: 86px;
+                    height: 24px;
+                    font-family: "Manrope", serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $textGray;
+                    @include sm{
+                        width: 105px;
+                        height: 17px;
+                        font-size: 12px;
+                        line-height: 17px;  
+                    }
+                }
+            }
+
+            .logo-main{
+                width: 622px;
+                height: 104px;
+                margin: 0 auto;
+                margin-top: 20px;
+                @include sm{
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                .top-main{
+                    display: flex;
+                    justify-content: space-between;
+                    @include sm{
+                        justify-content: space-around;
+                    }
+                    img{
+                        @include sm{
+                            width: 86px;
+                            height: 24px;
+                        }
+                    }
+                }
+                .bottom-main{
+                    display: flex;
+                    justify-content: space-evenly;
+                    img{
+                        @include sm{
+                            width: 86px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ---------------------------------------------
+
+    .blogs{
+        height: 778px;
+        @include sm{
+            height: 1288px;
+            margin-top: 15px;
+        }
+
+        .blog-tag{
+
+            p{
+                border-radius: 22px;
+                height: 30px;
+                width: 63px;
+                font-style: normal;
+                font-family: "Manrope", serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: $secondryColor;
+                background: linear-gradient(90deg, #E9D8FF -195.88%, rgba(255, 255, 255, 0) 364.12%, #29252E 364.12%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+
+            }
+        }
+        h1{
+            margin-top: 10px;
+            text-align: center;
+            height: 58px;
+            font-family: "Inter", serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 58px;
+            color: $primaryColor;
+            @include sm{
+                height: 29px;
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
+
+        .blogs-collettion{
+            display: flex;
+            // justify-content: space-between;
+            width: 100%;
+            height: 565px;
+            gap: 30px;
+            margin-top: 20px;
+            @include sm{
+                display: block;
+                height: 1146px;
+            }
+
+            .blog-main{
+                padding: 20px;
+
+                .each-blog{
+                    height: 505px;
+                    width: 100%;
+
+                    img{
+                        height: 220px;
+                        width: 100%;
+                    }
+                    .blog-category{
+                        height: 35px;
+                        width: 100%;
+
+                        p{
+                            width: 97px;
+                            height: 30px;
+                            border-radius: 47px;
+                            font-family: "Manrope", serif;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $liColor;
+                            background-color: $secondryColor2;
+                            padding: 4px 8px;
+                            text-align: center;
+                            
+                        }
+                    }
+                    .blog-text{
+                        width: 100%;
+                        height: 215px;
+                        margin-top: 25px;   
+
+                        h5{
+                            height: 48px;
+                            font-family: "Inter", serif;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 24px;
+                            color: $changeBlackColor;                   
+                        }
+                        p{
+                            height: 152px;
+                            font-family: "Inter", serif;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $grayColor;
+                            margin-top: 25px;
+                        }
+                    }
+                }
+
+                .blog-link{
+                    height: 20px;
+                    display: flex;
+                    justify-content: end;
+                    .link{
+                        display: block;
+                        height: 25px;
+                        width: 85px;
+                        p{
+                            height: 19px;
+                            font-style: normal;
+                            font-family: "Inter", serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: $grayColor;
+                        }
+                        .read-line{
+                            width: 76px;
+                            height: 0;
+                            border: 1px solid #000000;
+                        }
+                    }
+                }
+            }
+            .blog-3{
+                @include sm{
+                    display: none;
+                }
+            }
+
+        }
+
+        .actions{
+            width: 254px;
+            height: 35px;
+            margin: 0 auto;
+            margin-top: 15px;
+            display: flex;
+            .action-1{
+                
+                button{
+                    background-color: $secondryColor;
+                    width: 138px;
+                    height: 35px;
+                    border-radius: 20px;
+                    border: transparent;
+                    font-family: "Inter", serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $liColor;
+                }
+            }
+            .action-2{
+                width: 92px;
+                height: 24px;
+                display: flex;
+                gap: 8px;
+                justify-content: center;
+                align-items: center;
+                margin: auto 0 auto auto;
+                p{
+                    width: 60px;
+                    height: 24px;
+                    font-style: normal;
+                    font-family: "Inter", serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $primaryColor;
+                }
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    // ---------------------------------------------
+
+    .cta{
+        background-image: url(./img/3\ 1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 570px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sm{
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 30px;
+            height: 570px;
+            object-fit : cover ;
+        }
+
+        .cta-main{
+            width: 470px;
+            height: 349px;
+            position: relative;
+            @include sm{
+                height: 208px;
+                width: 90%;
+            }
+
+           .cta-img{
+                width: 100%;
+
+                    img{
+                        width: 58px;
+                        height: 56px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        @include sm{
+                            width: 48px;
+                            height: 46px;
+                        }
+                    }
+           }
+
+            .cta-box{
+                width: 100%;
+                height: 145px;
+                gap: 26px;
+                margin-top: 35px;
+                @include sm{
+                    height: 82px;
+                }
+
+                h3{
+                    height: 69px;
+                    font-family: "Inter", serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 48px;
+                    line-height: 58px;
+                    color: $liColor;
+                    @include sm{
+                        height: 24px;
+                        font-size: 20px;
+                        line-height: 24px;
+                        text-align:  center;
+                    }
+                }
+                p{
+                    height: 49px;
+                    font-size: 20px;
+                    line-height: 24px;
+                    font-family: "Inter", serif;
+                    font-style: normal;
+                    text-align: center;
+                    color: $liColor;
+                    margin-top: 20px;
+                    font-weight: 400;
+                    @include sm{
+                        height: 50px;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+
+            }
+            .email-form{
+                height: 48px;
+                width: 448px;
+                position: absolute;
+                bottom: 0;
+                border-radius: 12px;
+                border: 1px solid #E2E8F1;
+                background-color: $liColor;
+                @include sm{
+                    width: 0;
+                    display: block; 
+                    border: transparent;
+                    background-color: transparent;
+                }
+
+
+                .email{
+                    border-radius: 12px;
+                    border: transparent;
+                    padding-left: 20px;
+                    padding-top: 17px;
+                    @include sm{
+                        margin-top: 25px;
+                        border: 1px solid #E2E8F1;
+                        width: 343px;
+                        height: 48px;
+                        background-color: $liColor;
+                        padding: 0;
+                        padding-left: 15px;
+                        margin: 17px auto;
+                        margin-left: 25px;
+                    }
+
+                }
+                button{
+                    width: 209px;
+                    height: 42px;
+                    border-radius: 10px;
+                    background-color: $secondryColor;
+                    border: transparent;
+                    margin-left: 40px;
+                    @include sm{
+                        margin-left: 100px;
+                    }
+                    a{
+                        text-decoration: none;
+                        font-family: "Inter", serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: $liColor;
+                    }
+                }
+            }
+
         }
     }
 }
@@ -761,5 +1591,104 @@
 .footer {
     width: 100%;
     background-color: #a182e4;
+    background-image: url(./img/Rectangle\ 9383.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 265px;
+    margin-top: 120px;
+    padding-top: 26px;
+
+    @include sm{
+        height: 196px;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .footer-line{
+        width: 1148px;
+        height: 0;
+        border: 1px solid $liColor;
+        margin: 40px auto;
+
+        @include sm{
+            width: 385px;
+            margin: 25px auto;
+        }
+        
+    }
+
+    .footer-logo{
+        width: 1148px;
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        @include sm{
+            width: 385px;
+            display: block;
+            height: 62px;
+            text-align: left;
+        }
+
+        img{
+            width: 173px;
+            height: 24px;
+        }
+        .footer-ul{
+            width: 360px;
+            height: 22px;
+            display: flex;
+            gap: 20px;
+            @include sm{
+                margin-top: 10px;
+                width: 257px;
+            }
+
+            li{
+                @include footer-li;
+                a{
+                    text-decoration: none;
+                    @include footer-a;
+                }
+            }
+            .li{
+                @include sm{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .footer-year{
+        height: 17px;
+        width: 1148px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        @include sm{
+            width: 251px;
+
+        }
+
+        p{
+            width: 251px;
+            height: 17px;
+            font-style: normal;
+            font-family: "Manrope", serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: $liColor;
+        }
+        .year-ul{
+            display: flex;
+            gap: 20px;
+            height: 16px;
+            width: 91px;
+            @include sm{
+                display: none;
+            }
+        }
+    }
 }
